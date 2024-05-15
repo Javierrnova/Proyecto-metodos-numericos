@@ -10,6 +10,7 @@ app = Flask(__name__)
 # Página principal con formulario para ingresar los datos
 formulario_html = '''
 <h1> Punto Fijo</h1>
+<body style="background-color:D9CECB;">
     <form method="post">
         <label>Introduce la función f(x):</label>
         <input type="text" name="funcion_f" placeholder="x**2 - 2*x - 5"><br>

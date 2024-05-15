@@ -11,6 +11,8 @@ app = Flask(__name__)
 # Página principal con formulario para ingresar los datos
 formulario_html = '''
 <h1> Metodo de Bisección</h1>
+<body style="background-color:D9CECB;">
+</body>
     <form method="post">
         <label>Introduce la función f(x):</label>
         <input type="text" name="funcion_f" placeholder="x**2 - 2*x - 5"><br>
@@ -85,6 +87,7 @@ def metodo_biseccion():
             img_data = base64.b64encode(img_buffer.read()).decode('utf-8')
 
             return f'''<p>Raíz aproximada: {raiz_aproximada}</p>
+                    <body style="background-color:D9CECB;">
                     <img src="data:image/png;base64,{img_data}" alt="Gráfica de raíz">'''
         
         except SympifyError:
