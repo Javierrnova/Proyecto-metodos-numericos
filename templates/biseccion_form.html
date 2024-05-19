@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Método de Bisección{% endblock %}
+
+{% block content %}
+<h1>Método de Bisección</h1>
+<form method="post">
+    <label>Introduce la función f(x):</label>
+    <input type="text" name="funcion_f" placeholder="x**2 - 2*x - 5"><br>
+    <label>Introduce el intervalo a:</label>
+    <input type="text" name="intervalo_a" placeholder="1"><br>
+    <label>Introduce el intervalo b:</label>
+    <input type="text" name="intervalo_b" placeholder="2"><br>
+    <input type="submit" value="Calcular">
+</form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Método de Punto Fijo{% endblock %}
+
+{% block content %}
+<h1>Método de Punto Fijo</h1>
+<form method="post">
+    <label>Introduce la función f(x):</label>
+    <input type="text" name="funcion_f" placeholder="x**2 - 2*x - 5"><br>
+    <label>Introduce la función iterativa g(x):</label>
+    <input type="text" name="funcion_g" placeholder="sqrt(2*x + 5)"><br>
+    <label>Introduce el valor inicial para la iteración:</label>
+    <input type="text" name="valor_inicial" placeholder="2.0"><br>
+    <input type="submit" value="Calcular">
+</form>
+{% endblock %}

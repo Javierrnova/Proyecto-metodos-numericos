@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Método de la Secante{% endblock %}
+
+{% block content %}
+<h1>Método de la Secante</h1>
+<form method="post">
+    <label>Introduce la función f(x):</label>
+    <input type="text" name="funcion_f" placeholder="x**2 - 2*x - 5"><br>
+    <label>Introduce el primer valor inicial (x0):</label>
+    <input type="text" name="x0" placeholder="1"><br>
+    <label>Introduce el segundo valor inicial (x1):</label>
+    <input type="text" name="x1" placeholder="2"><br>
+    <input type="submit" value="Calcular">
+</form>
+{% endblock %}
