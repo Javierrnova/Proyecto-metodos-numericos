@@ -59,10 +59,10 @@ def metodo_secante():
             plt.axvline(x=0, color='black', linestyle='--', linewidth=2, label="Eje Y")
             plt.plot(raiz_aproximada, f_lambda(raiz_aproximada), 'o', color='red', label=f"Raíz: {raiz_aproximada:.5f}")
             
-            for sec_x_vals, sec_y_vals in zip(secante_x_vals, secante_y_vals):
-                plt
+            colors = plt.cm.inferno(np.linspace(0, 1, len(secante_x_vals)))
 
-                plt.plot(sec_x_vals, sec_y_vals, 'g--', alpha=0.5, label="Línea secante")
+            for i, (sec_x_vals, sec_y_vals) in enumerate(zip(secante_x_vals, secante_y_vals)):
+                plt.plot(sec_x_vals, sec_y_vals, color=colors[i], linestyle='--', alpha=0.7, label="Línea secante")
                 
             plt.title("Gráfica del Método de la Secante con Raíz")
             plt.xlabel("x")
