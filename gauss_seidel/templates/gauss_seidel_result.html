@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Resultado del Método de Gauss-Seidel{% endblock %}
+
+{% block content %}
+    <h1>Resultado del Método de Gauss-Seidel</h1>
+    <p>Solución encontrada:</p>
+    <p>{{ solucion }}</p>
+    <p>Número de iteraciones: {{ iteraciones }}</p>
+    <img src="data:image/png;base64,{{ img_data }}" alt="Gráfica de Convergencia">
+    <br><br>
+    <a href="/gauss_seidel">Calcular de nuevo</a>
+    {% endblock %}

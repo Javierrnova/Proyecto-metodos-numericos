@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Método de Gauss-Seidel{% endblock %}
+
+{% block content %}
+    <h1>Método de Gauss-Seidel</h1>
+    <form action="/gauss_seidel" method="post">
+        <label for="matriz_a">Matriz A (en formato [[a11, a12, ...], [a21, a22, ...], ...]):</label><br>
+        <input type="text" id="matriz_a" name="matriz_a" required><br><br>
+
+        <label for="vector_b">Vector b (en formato [b1, b2, ...]):</label><br>
+        <input type="text" id="vector_b" name="vector_b" required><br><br>
+
+        <label for="x0">Vector inicial x0 (en formato [x1, x2, ...]):</label><br>
+        <input type="text" id="x0" name="x0" required><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+    {% endblock %}

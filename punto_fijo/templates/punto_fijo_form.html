@@ -6,11 +6,43 @@
 <h1>Método de Punto Fijo</h1>
 <form method="post">
     <label>Introduce la función f(x):</label>
-    <input type="text" name="funcion_f" placeholder="x**2 - 2*x - 5"><br>
+    <input type="text" name="funcion_f" placeholder="x**2 - 2*x - 5" id="funcion_f"><br>
     <label>Introduce la función iterativa g(x):</label>
-    <input type="text" name="funcion_g" placeholder="sqrt(2*x + 5)"><br>
+    <input type="text" name="funcion_g" placeholder="sqrt(2*x + 5)" id="funcion_g"><br>
     <label>Introduce el valor inicial para la iteración:</label>
     <input type="text" name="valor_inicial" placeholder="2.0"><br>
     <input type="submit" value="Calcular">
 </form>
+<!-- Calculadora -->
+<div class="calculator">
+    <input type="text" id="calc-display" class="cursor-highlight" disabled>
+    <div class="calc-buttons">
+        <button type="button" onclick="appendToDisplay('1')">1</button>
+        <button type="button" onclick="appendToDisplay('2')">2</button>
+        <button type="button" onclick="appendToDisplay('3')">3</button>
+        <button type="button" onclick="appendToDisplay('+')">+</button>
+        <button type="button" onclick="appendToDisplay('-')">-</button>
+        <button type="button" onclick="appendToDisplay('4')">4</button>
+        <button type="button" onclick="appendToDisplay('5')">5</button>
+        <button type="button" onclick="appendToDisplay('6')">6</button>
+        <button type="button" onclick="appendToDisplay('*')">*</button>
+        <button type="button" onclick="appendToDisplay('/')">/</button>
+        <button type="button" onclick="appendToDisplay('7')">7</button>
+        <button type="button" onclick="appendToDisplay('8')">8</button>
+        <button type="button" onclick="appendToDisplay('9')">9</button>
+        <button type="button" onclick="appendToDisplay('(')">(</button>
+        <button type="button" onclick="appendToDisplay(')')">)</button>
+        <button type="button" onclick="appendToDisplay('0')">0</button>
+        <button type="button" onclick="appendToDisplay('**')">^</button>
+        <button type="button" class="button-variable" onclick="appendToDisplay('sqrt(')">√</button>
+        <button type="button" class="button-variable" onclick="appendToDisplay('x')">x</button>
+        <button type="button" onclick="clearDisplay()">C</button>
+        <button type="button" onclick="appendToFunction()">OK</button>
+        <button type="button" onclick="moveCursorLeft()">&#x2190;</button>
+        <button type="button" onclick="moveCursorRight()">&#x2192;</button>
+        <button type="button" onclick="deleteLastChar()">DEL</button>
+    </div>
+    <!-- Área de renderizado de LaTeX -->
+    <div id="latex-rendered" style="margin-top: 20px;"></div>
+</div>
 {% endblock %}

@@ -8,12 +8,19 @@ from sympy.core.sympify import SympifyError
 
 app = Flask(__name__)
 
+def process_input_expression(expression):
+    # Reemplazar LaTeX \sqrt{} por sqrt() y \^{} por **
+    expression = expression.replace("\\sqrt{}", "sqrt")
+    expression = expression.replace("^{}", "**")
+    expression = expression.replace("^", "**")
+    return expression
+
 @app.route('/puntofijo', methods=['GET', 'POST'])
 def calcular_raiz():
     if request.method == 'POST':
         try:
-            funcion_f_str = request.form['funcion_f']
-            funcion_g_str = request.form['funcion_g']
+            funcion_f_str = process_input_expression(request.form['funcion_f'])
+            funcion_g_str = process_input_expression(request.form['funcion_g'])
             valor_inicial_str = request.form['valor_inicial']
             
             f = sp.sympify(funcion_f_str)
