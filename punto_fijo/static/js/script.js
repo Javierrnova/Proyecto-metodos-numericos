@@ -84,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 latexString = latexString.substring(0, sqrtIndex + 6) + sqrtContentProcessed + latexString.substring(closingParenIndex);
             }
         }
+        // Verificar si el superíndice (^) está seguido de un número o expresión válida
+        latexString = latexString.replace(/\^(\D|$)/g, '^{ }$1');
     
         latexRendered.innerHTML = `\\[${latexString}\\]`;
         MathJax.typesetPromise([latexRendered]);

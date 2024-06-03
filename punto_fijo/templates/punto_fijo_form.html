@@ -15,6 +15,7 @@
 </form>
 <!-- Calculadora -->
 <div class="calculator">
+    <div id="latex-rendered" style="margin-top: 10px;"></div>
     <input type="text" id="calc-display" class="cursor-highlight" disabled>
     <div class="calc-buttons">
         <button type="button" onclick="appendToDisplay('1')">1</button>
@@ -43,6 +44,6 @@
         <button type="button" onclick="deleteLastChar()">DEL</button>
     </div>
     <!-- Área de renderizado de LaTeX -->
-    <div id="latex-rendered" style="margin-top: 20px;"></div>
+    <div id="latex-rendered" style="margin-top: -5px;"></div>
 </div>
 {% endblock %}
